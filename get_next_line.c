@@ -6,7 +6,7 @@
 /*   By: mbousouf <mbousouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 16:05:38 by mbousouf          #+#    #+#             */
-/*   Updated: 2022/12/01 19:37:43 by mbousouf         ###   ########.fr       */
+/*   Updated: 2023/03/10 23:23:50 by mbousouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ char	*red(char *save, int fd )
 	while (r > 0)
 	{
 		s[r] = '\0';
-		if (save)
+		if (save || ft_strchr(s, '\n'))
 		{
-			if (ft_strchr(save, '\n'))
+			if (ft_strchr(save, '\n') || ft_strchr(s, '\n'))
 			{
 				save = t_strjoin(save, s);
 				break ;

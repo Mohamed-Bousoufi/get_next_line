@@ -6,7 +6,7 @@
 /*   By: mbousouf <mbousouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 16:02:49 by mbousouf          #+#    #+#             */
-/*   Updated: 2022/12/04 18:54:23 by mbousouf         ###   ########.fr       */
+/*   Updated: 2023/03/10 23:27:19 by mbousouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	*ft_strchr(const char *s, int c)
 	size_t	len;
 
 	if (!s)
-		s = t_strdup("");
+		return (NULL);
 	ptr = (char *)s;
 	len = (t_strlen(s) + 1);
 	while (len > 0)
