@@ -6,7 +6,7 @@
 /*   By: mbousouf <mbousouf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 16:02:49 by mbousouf          #+#    #+#             */
-/*   Updated: 2023/03/10 23:27:19 by mbousouf         ###   ########.fr       */
+/*   Updated: 2023/08/26 16:45:28 by mbousouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ char	*t_strjoin(char *s1, char *s2)
 	j = 0;
 	s1len = t_strlen(s1);
 	s2len = t_strlen(s2);
-		ptr = (char *)malloc(s2len + s1len + 1);
+	ptr = (char *)malloc(s2len + s1len + 1);
 	if (!ptr)
 		return (NULL);
 	t_memmove(ptr, s1, s1len);
 	while (s2len)
 	{
-			ptr[s1len++] = s2[j++];
-				s2len--;
+		ptr[s1len++] = s2[j++];
+		s2len--;
 	}
-		ptr[s1len] = '\0';
+	ptr[s1len] = '\0';
 	free(s1);
 	return (ptr);
 }
